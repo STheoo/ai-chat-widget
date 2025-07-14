@@ -1,13 +1,12 @@
 # AI Chat Widget
-
+<div align="center">
 ![License](https://img.shields.io/npm/l/@stheo/ai-chat-widget)
 ![npm](https://img.shields.io/npm/v/@stheo/ai-chat-widget)
+</div>
 
 A lightweight, customizable React chat widget that connects to your AI backend via webhooks. Built specifically for n8n users in mind, the goal is to make it dead simple to connect to your Conversational AI Agent n8n workflows (e.g. customer support chatbot).
 
 https://github.com/user-attachments/assets/c6d35cc1-8ebb-46ee-94f7-df6981a834d1
-
-
 
 ## Installation
 
@@ -31,11 +30,11 @@ function App() {
 
 ## Props
 
-- webhookUrl (required): Webhook endpoint to post to.
-- title (optional): AI Chat widget title.
-- initialMessage (optional): AI Chat initial message.
-- sessionId (optional): Configure a session id to send to your AI workflows. 
-- csrfToken (optional): Option to add a csrf token in order to send post request server-side for security.
+- `webhookUrl (required)`: Webhook endpoint to post to.
+- `title (optional)`: AI Chat widget title.
+- `initialMessage (optional)`: AI Chat initial message.
+- `sessionId (optional)`: Configure a session id to send to your AI workflows. 
+- `csrfToken (optional)`: Option to add a csrf token in order to send post request server-side for security.
 
 ## API Format
 
