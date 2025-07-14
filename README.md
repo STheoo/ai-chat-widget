@@ -1,6 +1,13 @@
 # AI Chat Widget
 
-A lightweight, customizable React chat widget that connects to your AI backend via webhooks.
+![License](https://img.shields.io/npm/l/@stheo/ai-chat-widget)
+![npm](https://img.shields.io/npm/v/@stheo/ai-chat-widget)
+
+A lightweight, customizable React chat widget that connects to your AI backend via webhooks. Built specifically for n8n users in mind, the goal is to make it dead simple to connect to your Conversational AI Agent n8n workflows (e.g. customer support chatbot).
+
+https://github.com/user-attachments/assets/c6d35cc1-8ebb-46ee-94f7-df6981a834d1
+
+
 
 ## Installation
 
@@ -15,22 +22,20 @@ import { AIChatWidget } from "ai-chat-widget";
 
 function App() {
     return (
-        <div>
+        <>
             <AIChatWidget webhookUrl="https://your-api.com/chat" title="AI Assistant" initialMessage="Hello! How can I help you today?" />
-        </div>
+        </>
     );
 }
 ```
 
 ## Props
 
-| Prop             | Type     | Required | Default                              | Description             |
-| ---------------- | -------- | -------- | ------------------------------------ | ----------------------- |
-| `webhookUrl`     | `string` | ✅       | -                                    | Your chat API endpoint  |
-| `title`          | `string` |          | `"AI Assistant"`                     | Chat widget title       |
-| `initialMessage` | `string` |          | `"Hello! How can I help you today?"` | Welcome message         |
-| `sessionId`      | `string` |          | `"sample_session"`                   | Session identifier      |
-| `csrfToken`      | `string` |          | `""`                                 | CSRF token for security |
+- webhookUrl (required): Webhook endpoint to post to.
+- title (optional): AI Chat widget title.
+- initialMessage (optional): AI Chat initial message.
+- sessionId (optional): Configure a session id to send to your AI workflows. 
+- csrfToken (optional): Option to add a csrf token in order to send post request server-side for security.
 
 ## API Format
 
@@ -52,18 +57,31 @@ And respond with:
 ```
 
 ## Features
+This is currently a pre-release version with the very basic features that we will expand in the future.
 
--   🎨 Clean, modern UI with smooth animations
--   📱 Mobile responsive design
--   ⌨️ Keyboard navigation (Enter to send)
--   💬 Typing indicators
--   🔒 CSRF token support
--   🎯 Floating chat button
--   ⚡ Lightweight and fast
+- Clean Animations Using Pure CSS
+- Mobile Responsive Design
+- Keyboard Navigation
+- Typing Indicators
+- CSRF Token Support
+- Lightweight and fast.
+
+## Incoming Upgrades
+- Apply React Portal Escape
+- UI Design Enhancements
+- Full Accessiblity
+- Compound Component Design Pattern
+- Full Customizability
+- Item Carousels for AI Recommendation Systems
+- Authentication Options
+- File Attachement Support
 
 ## Styling
 
 The widget comes with built-in styles. It positions itself as a floating button in the bottom-right corner and expands into a chat interface when clicked.
+
+## How you can support me
+I appreciate you visiting my repository! It would mean a lot if you could give me your feedback or atleast leaving a star on your way out. If you would like to contribute I am also open to discuss privately.
 
 ## License
 
