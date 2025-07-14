@@ -1,0 +1,61 @@
+{
+    "name": "@stheo/ai-chat-widget",
+    "version": "0.0.1",
+    "description": "A simple AI chat widget using webhooks.",
+    "type": "module",
+    "main": "dist/ai-chat-widget.umd.cjs",
+    "module": "dist/ai-chat-widget.js",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/ai-chat-widget.js",
+            "require": "./dist/ai-chat-widget.umd.cjs"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "ai",
+        "chat",
+        "widget",
+        "webhook",
+        "n8n"
+    ],
+    "author": "Savvas Theocharous <theocharous.savvas@outlook.com>",
+    "license": "MIT",
+    "sideEffects": false,
+    "scripts": {
+        "dev": "vite",
+        "prebuild": "rm -rf dist",
+        "build": "tsc -b ./tsconfig.lib.json && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "peerDependencies": {
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.30.1",
+        "@types/node": "^24.0.13",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@vitejs/plugin-react": "^4.6.0",
+        "eslint": "^9.30.1",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-refresh": "^0.4.20",
+        "globals": "^16.3.0",
+        "typescript": "~5.8.3",
+        "typescript-eslint": "^8.35.1",
+        "vite": "^7.0.4",
+        "vite-plugin-dts": "^4.5.4",
+        "vite-plugin-lib-inject-css": "^2.2.2"
+    },
+    "dependencies": {
+        "vite-tsconfig-paths": "^5.1.4"
+    }
+}
