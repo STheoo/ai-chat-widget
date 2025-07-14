@@ -1,8 +1,9 @@
 # AI Chat Widget
-<div align="center">
-![License](https://img.shields.io/npm/l/@stheo/ai-chat-widget)
-![npm](https://img.shields.io/npm/v/@stheo/ai-chat-widget)
-</div>
+
+<p align="center">
+  <img src="https://img.shields.io/npm/l/@stheo/ai-chat-widget" />
+  <img src="https://img.shields.io/npm/v/@stheo/ai-chat-widget" />
+</p>
 
 A lightweight, customizable React chat widget that connects to your AI backend via webhooks. Built specifically for n8n users in mind, the goal is to make it dead simple to connect to your Conversational AI Agent n8n workflows (e.g. customer support chatbot).
 
