@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/c6d35cc1-8ebb-46ee-94f7-df6981a834d1
 ## Installation
 
 ```bash
-npm install ai-chat-widget
+npm install @stheo/ai-chat-widget
 ```
 
 ## Usage
