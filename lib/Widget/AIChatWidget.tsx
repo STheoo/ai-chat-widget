@@ -14,6 +14,8 @@ interface ChatWidgetProps {
     sessionId?: string;
     csrfToken?: string;
     webhookUrl: string;
+    avatarSrc?: string;
+    primaryColor?: string;
 }
 
 export const AIChatWidget = ({
@@ -22,6 +24,8 @@ export const AIChatWidget = ({
     webhookUrl,
     sessionId,
     csrfToken,
+    avatarSrc,
+    primaryColor,
 }: ChatWidgetProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -99,7 +103,18 @@ export const AIChatWidget = ({
     };
 
     return (
-        <div className="chat-widget" data-open={isOpen}>
+        <div
+            className="chat-widget"
+            data-open={isOpen}
+            style={
+                primaryColor
+                    ? ({
+                          "--primary-color": primaryColor,
+                          "--primary-gradient": `linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%), ${primaryColor}`,
+                      } as React.CSSProperties)
+                    : undefined
+            }
+        >
             <button className="chat-toggle-button" onClick={toggleChat}>
                 <svg className="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path>
@@ -108,7 +123,18 @@ export const AIChatWidget = ({
 
             <div className="chat-interface">
                 <div className="chat-header">
-                    <h3>{title}</h3>
+                    {avatarSrc && (
+                        <div className="chat-avatar">
+                            <img src={avatarSrc} alt="AI Avatar" />
+                        </div>
+                    )}
+                    <div className="chat-title">
+                        <h3>{title}</h3>
+                        <div className="status">
+                            <div className="ping-dot" />
+                            <p>Online</p>
+                        </div>
+                    </div>
                     <button
                         className="close-button"
                         onClick={(e) => {
@@ -162,9 +188,11 @@ export const AIChatWidget = ({
                         onKeyDown={handleKeyPress}
                     />
                     <button onClick={sendMessage} disabled={!inputText.trim()}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M25.05 2.90375C26.32 2.46 27.54 3.68 27.0963 4.95L19.69 26.1125C19.2088 27.485 17.2963 27.5625 16.7063 26.2338L13.1325 18.1938L18.1625 13.1625C18.3281 12.9848 18.4183 12.7497 18.414 12.5068C18.4097 12.264 18.3113 12.0322 18.1395 11.8605C17.9678 11.6887 17.736 11.5903 17.4932 11.586C17.2503 11.5817 17.0152 11.6719 16.8375 11.8375L11.8063 16.8675L3.76625 13.2938C2.4375 12.7025 2.51625 10.7913 3.8875 10.31L25.05 2.90375Z"
+                                fill="currentColor"
+                            />
                         </svg>
                     </button>
                 </div>

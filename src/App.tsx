@@ -15,10 +15,16 @@ function App() {
                         <li>Dummy AI responses with keyword recognition</li>
                         <li>Message timestamps</li>
                         <li>Modern, clean UI design</li>
+                        <li>Customizable primary color</li>
+                        <li>Customizable avatar</li>
                     </ul>
                 </div>
             </div>
-            <AIChatWidget webhookUrl="https://mspn8n.savvastheocharous.com/webhook/cb75731e-d683-4a8e-a907-6a6b753b2f87" />
+            <AIChatWidget
+                webhookUrl="https://mspn8n.savvastheocharous.com/webhook/cb75731e-d683-4a8e-a907-6a6b753b2f87"
+                avatarSrc="https://i.pravatar.cc/150?img=22"
+                primaryColor="#3D47B6"
+            />
         </>
     );
 }

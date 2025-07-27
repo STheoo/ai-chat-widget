@@ -8,6 +8,7 @@
 A lightweight, customizable React chat widget that connects to your AI backend via webhooks. Built specifically for n8n users in mind, the goal is to make it dead simple to connect to your Conversational AI Agent n8n workflows (e.g. customer support chatbot).
 
 https://github.com/user-attachments/assets/c6d35cc1-8ebb-46ee-94f7-df6981a834d1
+(Outdated the design has been enhanced and I will release a updated video demo soon)
 
 ## Installation
 
@@ -23,7 +24,7 @@ import { AIChatWidget } from "@stheo/ai-chat-widget";
 function App() {
     return (
         <>
-            <AIChatWidget webhookUrl="https://your-api.com/chat" title="AI Assistant" initialMessage="Hello! How can I help you today?" />
+            <AIChatWidget webhookUrl="https://your-api.com/chat" title="AI Assistant" initialMessage="Hello! How can I help you today?" primaryColor="#3D47B6" />
         </>
     );
 }
@@ -36,6 +37,8 @@ function App() {
 -   `initialMessage (optional)`: AI Chat initial message.
 -   `sessionId (optional)`: Configure a session id to send to your AI workflows.
 -   `csrfToken (optional)`: Option to add a csrf token in order to send post request server-side for security.
+-   `avatarSrc (optional)`: Prop to pass your own avatar image into the widget.
+-   `primaryColor (optional)`: Brand your chat widget with your own primary color. (Only HEX)
 
 ## API Format
 
@@ -60,23 +63,25 @@ And respond with:
 
 This is currently a pre-release version with the very basic features that we will expand in the future.
 
--   Clean Animations Using Pure CSS
--   Mobile Responsive Design
--   Keyboard Navigation
--   Typing Indicators
--   CSRF Token Support
+-   Clean Animations Using Pure CSS.
+-   Mobile Responsive Design.
+-   Keyboard Navigation.
+-   Typing Indicators.
+-   CSRF Token Support.
 -   Lightweight and fast.
+-   Customizable Color.
+-   Dynamic Avatar Support.
 
 ## Incoming Upgrades
 
--   Apply React Portal Escape
--   UI Design Enhancements
--   Full Accessiblity
--   Compound Component Design Pattern
--   Full Customizability
--   Item Carousels for AI Recommendation Systems
--   Authentication Options
--   File Attachement Support
+-   Apply React Portal Escape.
+-   UI Design Enhancements.
+-   Full Accessiblity.
+-   Compound Component Design Pattern.
+-   Full Customizability.
+-   Item Carousels for AI Recommendation Systems.
+-   Authentication Options.
+-   File Attachement Support.
 
 ## Styling
 
