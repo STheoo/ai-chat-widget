@@ -1,6 +1,6 @@
 {
     "name": "@stheo/ai-chat-widget",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "A simple AI chat widget using webhooks.",
     "type": "module",
     "main": "dist/ai-chat-widget.umd.cjs",
